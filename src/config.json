@@ -1,6 +1,6 @@
 { 
     "prefix": "!",
-    "token": "MTA2NjY3NjgxMzk2NDc4Nzc0Mg.GF63n_.aigZ8L_bcx0cPJZQtu2Yq9Bhb63cYm9DSis4g4",
+    "token": "-----",
     "emoji": {
       "play": "▶️",
       "stop": "⏹️",
@@ -9,5 +9,5 @@
       "repeat": "🔁",
       "error": "❌"
     },
-    "openai_key": "pk-NwDiOOMrFvlswsLdwiNFILAQINnhVxxaPMWiqlFikyIPJZbo"
+    "openai_key": "--------"
 }
