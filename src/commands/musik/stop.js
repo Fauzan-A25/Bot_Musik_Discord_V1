@@ -40,5 +40,6 @@ module.exports = {
         oldNotifications.forEach(async (message) => {
             await message.delete().catch(console.error);
         });
+        client.distube.voices.leave(interaction);
     }
 }

@@ -5,9 +5,6 @@ const {
   Partials,
   GatewayIntentBits,
   EmbedBuilder,
-  ActionRowBuilder,
-  ButtonBuilder,
-  ButtonStyle,
   TextChannel,
 } = require("discord.js");
 const client = new Client({
@@ -191,13 +188,34 @@ client.distube
       .setTimestamp();
     notificationAlert2(message.channel, [noResultEmbed]);
   })
-  .on("finish", (queue) => {
-    console.log("Finished queue");
-    const finishEmbed = new EmbedBuilder()
-      .setColor("#0099ff")
-      .setDescription("Finished!")
-      .setTimestamp();
-    notificationAlert2(queue, [finishEmbed]);
+  .on("finish", async (queue) => {
+    try {
+      console.log("Queue finished");
+
+      // Fetch the latest message
+      const oldMessages = await queue.textChannel.messages.fetch({ limit: 1 });
+      const oldMessage = oldMessages.first();
+
+      // Delete the previous message if any
+      if (oldMessage) {
+        await oldMessage.delete();
+      }
+
+      // Send new "Finished" message
+      const finishEmbed = new EmbedBuilder()
+        .setColor("#0099ff")
+        .setDescription("Queue finished! Leaving the voice channel...")
+        .setTimestamp();
+      await notificationAlert2(queue, [finishEmbed]);
+
+      // Ensure the bot leaves the voice channel
+      const connection = client.voice.connections.find(conn => conn.channel.id === queue.voiceChannel.id);
+      if (connection) {
+        connection.destroy();
+      }
+    } catch (e) {
+      errorsHandling(queue.textChannel, e);
+    }
   });
 
 const functionfolders = fs.readdirSync(`./src/functions`);
