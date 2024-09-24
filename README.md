@@ -81,5 +81,3 @@ For any questions or feedback, you can reach out to:
 
 Made with ❤️ by Fauzan-A25
 ```
-
-You can modify the template as needed and replace placeholders with actual information specific to your project. This `README.md` provides a comprehensive guide for users and contributors to understand and use your Discord Music Bot repository.
