@@ -1,4 +1,3 @@
-```markdown
 # Discord Music Bot
 
 This repository contains the code for a feature-rich Discord music bot built using **Node.js**. The bot allows users to play, pause, skip, and manage music directly in their Discord server. It supports multiple music sources, including **YouTube**, **SoundCloud**, and **Spotify**.
@@ -13,7 +12,6 @@ This repository contains the code for a feature-rich Discord music bot built usi
 
 ## 📂 Folder Structure
 
-```
 📦 Bot_Musik_Discord_V1
 ├── 📁 node_modules
 ├── 📁 src
@@ -22,7 +20,6 @@ This repository contains the code for a feature-rich Discord music bot built usi
 ├── package-lock.json
 ├── package.json
 └── README.md
-```
 
 ## 🚀 Getting Started
 
