@@ -80,4 +80,3 @@ For any questions or feedback, you can reach out to:
 ---
 
 Made with ❤️ by Fauzan-A25
-```
