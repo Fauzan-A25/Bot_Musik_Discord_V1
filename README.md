@@ -29,7 +29,7 @@ Follow these steps to get a copy of the project running on your local machine.
 
 - **Node.js** (v12 or later)
 - **Discord Account** and a Discord server
-- **YouTube API Key** (optional but recommended for YouTube support)
+- **Discord API Bot** (API your bot token)
 
 ### Installation
 
