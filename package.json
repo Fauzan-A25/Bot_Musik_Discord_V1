@@ -4,7 +4,7 @@
   "description": "ini bot dibuat 17/08/2023",
   "main": "src/index.js",
   "scripts": {
-    "test": "node ."
+    "start": "node ."
   },
   "keywords": [],
   "author": "fauzan",
