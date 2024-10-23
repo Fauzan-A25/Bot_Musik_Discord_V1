@@ -44,6 +44,9 @@ client.distube = distube;
 client.buttons = new Map();
 client.queue = new Map();
 
+// Load the `.env` file
+require("dotenv").config();
+
 const functionFolders = fs.readdirSync(`./src/functions`);
 for (const folder of functionFolders) {
   const functionFiles = fs
@@ -227,4 +230,4 @@ for (const folder of functionfolders) {
 
 client.handleEvents();
 client.handleCommands();
-client.login(config.token);
+client.login(process.env.TOKEN);
