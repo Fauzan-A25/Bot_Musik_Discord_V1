@@ -24,20 +24,17 @@ const { SpotifyPlugin } = require("@distube/spotify");
 const { SoundCloudPlugin } = require("@distube/soundcloud");
 const { YtDlpPlugin } = require("@distube/yt-dlp");
 const { createPlaySongEmbed } = require("./utils/song");
+const ffmpegPath = require("ffmpeg-static");
 
 client.config = config;
 const distube = new DisTube(client, {
-  leaveOnStop: false,
+  ffmpeg: {
+    path: ffmpegPath,
+  },
   emitNewSongOnly: true,
   emitAddSongWhenCreatingQueue: false,
   emitAddListWhenCreatingQueue: false,
-  plugins: [
-    new SpotifyPlugin({
-      emitEventsAfterFetching: true,
-    }),
-    new SoundCloudPlugin(),
-    new YtDlpPlugin(),
-  ],
+  plugins: [new SpotifyPlugin(), new SoundCloudPlugin(), new YtDlpPlugin()],
 });
 client.commandArray = [];
 client.commands = new Collection();
@@ -68,7 +65,6 @@ function importCommands(dir) {
 }
 
 const commands = importCommands(path.join(__dirname, "components/buttons"));
-console.log(commands);
 
 client.on("messageCreate", async (message) => {
   if (message.author.bot || !message.guild) return;
@@ -209,7 +205,9 @@ client.distube
       await notificationAlert2(queue, [finishEmbed]);
 
       // Ensure the bot leaves the voice channel
-      const connection = client.voice.connections.find(conn => conn.channel.id === queue.voiceChannel.id);
+      const connection = client.voice.connections.find(
+        (conn) => conn.channel.id === queue.voiceChannel.id
+      );
       if (connection) {
         connection.destroy();
       }
