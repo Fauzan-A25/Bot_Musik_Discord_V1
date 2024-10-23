@@ -12,14 +12,12 @@ This repository contains the code for a feature-rich Discord music bot built usi
 
 ## 📂 Folder Structure
 
-📦 Bot_Musik_Discord_V1
-├── 📁 node_modules
-├── 📁 src
-├── 1721014397421-base.js
-├── 1721014511610-base.js
-├── package-lock.json
-├── package.json
-└── README.md
+📦 Bot_Musik_Discord_V1   
+├── 📁 node_modules   
+├── 📁 src   
+├── package-lock.json   
+├── package.json   
+└── README.md   
 
 ## 🚀 Getting Started
 
