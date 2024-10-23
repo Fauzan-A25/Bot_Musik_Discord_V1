@@ -12,10 +12,10 @@ module.exports = {
                 .setRequired(true)
         ),
     async execute(interaction, client) {
-        console.log('Kunci API:', config.openai_key);
+        console.log('Kunci API:', process.env.OPENAI_API_KEY);
 
         const openai = new OpenAI({
-            apiKey: config.openai_key 
+            apiKey: process.env.OPENAI_API_KEY
         });
 
         try {

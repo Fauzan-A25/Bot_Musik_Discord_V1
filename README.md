@@ -12,14 +12,12 @@ This repository contains the code for a feature-rich Discord music bot built usi
 
 ## 📂 Folder Structure
 
-📦 Bot_Musik_Discord_V1
-├── 📁 node_modules
-├── 📁 src
-├── 1721014397421-base.js
-├── 1721014511610-base.js
-├── package-lock.json
-├── package.json
-└── README.md
+📦 Bot_Musik_Discord_V1   
+├── 📁 node_modules   
+├── 📁 src   
+├── package-lock.json   
+├── package.json   
+└── README.md   
 
 ## 🚀 Getting Started
 
@@ -37,17 +35,27 @@ Follow these steps to get a copy of the project running on your local machine.
    ```bash
    git clone https://github.com/Fauzan-A25/Bot_Musik_Discord_V1.git
    ```
+
 2. Navigate to the project directory:
    ```bash
    cd Bot_Musik_Discord_V1
    ```
+
 3. Install the dependencies:
    ```bash
    npm install
    ```
+
 4. Configure your bot by editing `config.json` in the `src` folder.
 
-5. Start the bot:
+5. Create a `.env` file in the root directory and add the following environment variables:
+   ```env
+   DISCORD_TOKEN = YOUR_DISCORD_TOKEN
+   OPENAI_API_KEY = YOUR_OPENAI_API_KEY
+   BOT_ID = YOUR_BOT_ID
+   ```
+
+6. Start the bot:
    ```bash
    npm start
    ```

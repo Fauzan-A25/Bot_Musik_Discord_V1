@@ -1,6 +1,5 @@
 { 
     "prefix": "!",
-    "token": "_",
     "emoji": {
       "play": "▶️",
       "stop": "⏹️",
@@ -8,6 +7,5 @@
       "success": "☑️",
       "repeat": "🔁",
       "error": "❌"
-    },
-    "openai_key": "--------"
+    }
 }
