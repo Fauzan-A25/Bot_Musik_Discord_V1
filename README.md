@@ -47,13 +47,14 @@ Follow these steps to get a copy of the project running on your local machine.
    ```bash
    npm install
    ```
-   
+
 4. Configure your bot by editing `config.json` in the `src` folder.
 
 5. Create a `.env` file in the root directory and add the following environment variables:
    ```env
    DISCORD_TOKEN = YOUR_DISCORD_TOKEN
    OPENAI_API_KEY = YOUR_OPENAI_API_KEY
+   BOT_ID = YOUR_BOT_ID
    ```
 
 6. Start the bot:
